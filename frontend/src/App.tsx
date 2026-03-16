@@ -4,7 +4,7 @@ import { ChatWindow } from './components/ChatWindow'
 import { useAppStore } from './store/useAppStore'
 
 function App() {
-  const { darkMode, activeConversationId, setActiveConversationId } = useAppStore()
+  const { darkMode, activeConversationId } = useAppStore()
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light')
