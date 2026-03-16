@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.env
+.venv/
+venv/
+env/
+*.log
+
+# Django
+*.sqlite3
+/backend/media/
+/backend/staticfiles/
+/backend/static/
+
+# ChromaDB / Vector store
+/data/
+chroma_db/
+
+# Frontend
+node_modules/
+/frontend/dist/
+/frontend/.env
+/frontend/.env.local
+/frontend/.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Railway / Deploy
+.railway/
