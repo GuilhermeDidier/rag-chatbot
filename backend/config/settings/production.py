@@ -2,7 +2,8 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
+_allowed = os.environ.get("ALLOWED_HOSTS", "*")
+ALLOWED_HOSTS = ["*"] if _allowed == "*" else [h.strip() for h in _allowed.split(",") if h.strip()]
 
 _cors_origins = os.environ.get("CORS_ALLOWED_ORIGINS", "")
 CORS_ALLOWED_ORIGINS = [o for o in _cors_origins.split(",") if o.strip()]
