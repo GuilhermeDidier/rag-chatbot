@@ -1,11 +1,12 @@
 {
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
-    "builder": "NIXPACKS"
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile"
   },
   "deploy": {
-    "startCommand": "npx serve dist --listen $PORT",
     "healthcheckPath": "/",
-    "healthcheckTimeout": 15
+    "healthcheckTimeout": 15,
+    "restartPolicyType": "ON_FAILURE"
   }
 }
